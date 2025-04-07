@@ -154,7 +154,7 @@ Define identifier for your Bedrock agent in the `.env` file
 
 ```bash
 AGENT_ID='replace-with-your-amazon-bedrock-Agent-id'
-AGENT_ALIAS_ID=''replace-with-your-amazon-bedrock-Agent-alias'
+AGENT_ALIAS_ID='replace-with-your-amazon-bedrock-Agent-alias'
 
 ```
 
