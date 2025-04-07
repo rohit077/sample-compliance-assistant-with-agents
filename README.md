@@ -8,46 +8,28 @@ Welcome to the **sample-compliance-assistant-with-agents** project, powered by [
 ## 📌 Table of Contents
 
 - [sample-compliance-assistant-with-agents](#sample-compliance-assistant-with-agents)
-
-- [Automate Compliance With Bedrock and CrewAI](#automate-compliance-with-bedrock-and-crewai)
-
-- [📌 Table of Contents](#-table-of-contents)
-
-- [📚 Background Information](#-background-information)
-
-- [## 💻 Demo](#-demo)
-
-- [🎯 What This Solution Does](#-what-this-solution-does)
-
-- [Key Technologies Used](#key-technologies-used)
-
-- [📋 Prerequisites](#-prerequisites)
-
-- [AWS Account Requirements](#aws-account-requirements)
-
-- [Technical Requirements](#technical-requirements)
-
-- [🚀 Installation](#-installation)
-
-- [Step 1: Install CrewAI](#step-1-install-crewai)
-
-- [Step 2: Install Dependencies](#step-2-install-dependencies)
-
-- [⚙️ Customization](#️-customization)
-
-- [Add Your LLM. Depending on the LLM usage you may need to provide API key for LLM](#add-your-llm-depending-on-the-llm-usage-you-may-need-to-provide-api-key-for-llm)
-
-- [Configure Agents and Tasks](#configure-agents-and-tasks)
-
-- [🏃 Running the Project](#-running-the-project)
-
-- [🤖 Understanding Your Crew](#-understanding-your-crew)
-
-- [📋 Additional Documentation](#-additional-documentation)
-
-- [🤝 Contributing](#-contributing)
-
-- [📄 License](#-license)
+    - [Automate Compliance With Bedrock and CrewAI](#automate-compliance-with-bedrock-and-crewai)
+  - [📌 Table of Contents](#-table-of-contents)
+  - [📚 Background Information](#-background-information)
+  - [💻 Demo](#-demo)
+  - [🎯 What This Solution Does](#-what-this-solution-does)
+    - [Key Technologies Used](#key-technologies-used)
+  - [📋 Prerequisites](#-prerequisites)
+    - [AWS Account Requirements](#aws-account-requirements)
+    - [Technical Requirements](#technical-requirements)
+  - [🚀 Installation](#-installation)
+    - [Step 1: Install CrewAI](#step-1-install-crewai)
+    - [Step 2: Install Dependencies](#step-2-install-dependencies)
+  - [⚙️ Customization](#️-customization)
+    - [Define Your LLM.](#define-your-llm)
+    - [Define your compliance challenge or Topic](#define-your-compliance-challenge-or-topic)
+    - [Define your Bedrock Agent Details](#define-your-bedrock-agent-details)
+    - [Configure Agents and Tasks](#configure-agents-and-tasks)
+  - [🏃 Running the Project](#-running-the-project)
+  - [🤖 Understanding Your Crew](#-understanding-your-crew)
+  - [📋 Additional Documentation](#-additional-documentation)
+  - [🤝 Contributing](#-contributing)
+  - [📄 License](#-license)
 
 
 ## 📚 Background Information
@@ -120,7 +102,6 @@ Ensure you have **Python >=3.10 installed on your system. This project uses [UV]
 
 ### Step 1: Install CrewAI
 
-  
 
 If you haven't already, install CrewAI and uv:
 
@@ -167,6 +148,16 @@ TOPIC='Latest PCI DSS requirements for Trading Platforms'
 
 ```
 
+### Define your Bedrock Agent Details  
+
+Define identifier for your Bedrock agent in the `.env` file 
+
+```bash
+AGENT_ID='replace-with-your-amazon-bedrock-Agent-id'
+AGENT_ALIAS_ID=''replace-with-your-amazon-bedrock-Agent-alias'
+
+```
+
 ### Configure Agents and Tasks
 
 
@@ -174,16 +165,11 @@ TOPIC='Latest PCI DSS requirements for Trading Platforms'
 
 -  `config/tasks.yaml` defines your tasks.
 
--  `tools/brAgentTool.py` custom tool to talk with Amazon Bedrock Knowledge Base
-
 -  `crew.py` Executes the Crew
 
 -  `main.py` starting point
   
 Feel free to modify the agents and tasks based on your specific requirements
-
-
-- Modify `tools/.env` file add custom arguments for your Amazon Bedrock Agents and Amazon Bedrock Knowledge Bases
 
 
 ## 🏃 Running the Project
